@@ -4,6 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <title>Surat Ulang Tahun Untuk Sayangkuu</title>
+<meta name="description" content="Ada sebuah surat kecil yang menunggumu 💌">
+<meta name="theme-color" content="#2A1B33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Untukmu 💌">
+<meta property="og:title" content="Sebuah surat untukmu 💌">
+<meta property="og:description" content="Disegel rapat. Ketuk untuk membukanya ✨">
+<meta property="og:url" content="https://komlaps2a-svg.github.io/for-you-/">
+<meta property="og:image" content="https://komlaps2a-svg.github.io/for-you-/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sebuah surat untukmu 💌">
+<meta name="twitter:description" content="Disegel rapat. Ketuk untuk membukanya ✨">
+<meta name="twitter:image" content="https://komlaps2a-svg.github.io/for-you-/assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://media.tenor.com">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;700&family=Quicksand:wght@500;700&display=swap');
 :root{--ivory:#FBF6F0;--paper:#F6EEE3;--plum:#2A1B33;--rose:#C97B84;--rose-d:#A85566;--rose-b:#E0899A;--gold:#C9A860;--gold-l:#E4CE99;--ink:#3A2E32;--bark:#6B4226}
@@ -142,13 +161,22 @@ input#pass:focus{border-color:var(--gold)}
 #wall .ph span{font-size:1rem;padding:0}
 #lb{position:fixed;inset:0;background:rgba(20,10,25,.88);z-index:150;display:grid;place-items:center;animation:fi .3s}
 #lb .frame{width:min(310px,82vw)}
+/* TIMER HARI JADI */
+.tm{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0 12px}
+.tb{background:#fffaf2;border-radius:10px;padding:9px 2px 7px;box-shadow:inset 0 0 0 1px rgba(201,168,96,.5)}
+.tb b{display:block;font:700 1.45rem Fraunces,serif;color:var(--rose-d);line-height:1.1;font-variant-numeric:tabular-nums}
+.tb small{display:block;margin-top:3px;font:700 .6rem Quicksand;color:var(--bark);text-transform:uppercase;letter-spacing:.5px}
+.tb.pop b{animation:tp .35s}
+@keyframes tp{40%{transform:scale(1.18)}}
+.since{font:1.25rem Caveat,cursive;font-weight:700;color:var(--bark);margin-bottom:10px}
+.tot{font-family:Fraunces,serif;font-style:italic;font-size:1.15rem;color:var(--rose-d);margin-bottom:8px}
 </style>
 </head>
 <body>
 <canvas id="fx"></canvas>
 <div class="mb" id="mb2" style="display:none" title="Lagu berikutnya">⏭</div>
 <div class="mb" id="mb" title="Musik">🔇</div>
-<div id="nav"><button id="bk" aria-label="Kembali">‹</button><span id="cnt">1/12</span><button id="nx" aria-label="Lanjut">›</button></div>
+<div id="nav"><button id="bk" aria-label="Kembali">‹</button><span id="cnt">1/13</span><button id="nx" aria-label="Lanjut">›</button></div>
 
 <!-- 1 LOGIN -->
 <section class="scr on" id="s0"><div class="card"><div class="seal">💌</div>
@@ -244,8 +272,24 @@ input#pass:focus{border-color:var(--gold)}
 <button class="btn ghost" id="mic" style="display:none">🎤 Tiup pakai suara</button>
 <div id="cmsg"><h1>Semoga semua doamu terkabul sayanggg 🌟</h1><button class="btn" data-adv>Satu halaman lagi 💌</button></div></div></section>
 
-<!-- 12 FINAL -->
-<section class="scr" id="s11"><div class="card"><div class="seal">💖</div>
+<!-- 12 TIMER HARI JADI -->
+<section class="scr" id="s11"><div class="card"><div class="seal">⏳</div>
+<p class="ribbon">Sudah selama ini kita bersama</p>
+<div class="stk" data-k="love" data-e="💞" style="width:110px;height:110px"></div>
+<div class="tm" id="tm">
+<div class="tb"><b>00</b><small>bulan</small></div>
+<div class="tb"><b>00</b><small>hari</small></div>
+<div class="tb"><b>00</b><small>jam</small></div>
+<div class="tb"><b>00</b><small>menit</small></div>
+<div class="tb"><b>00</b><small>detik</small></div>
+</div>
+<p class="tot" id="ttot"></p>
+<p class="since">sejak Selasa, 1 September 2026 · 19.45 WIB 🤍</p>
+<p class="sub" id="tnext" style="margin-bottom:14px"></p>
+<button class="btn" data-adv>Satu halaman lagi 💌</button></div></section>
+
+<!-- 13 FINAL -->
+<section class="scr" id="s12"><div class="card"><div class="seal">💖</div>
 <div class="stk rv" data-k="hug" data-e="🤗" style="width:140px;height:140px"></div>
 <h1 class="rv" style="--d:.2s">Selamat Ulang Tahun Sayangkuu Inda Satliah! 💖</h1>
 <p class="rv" style="--d:.35s">Terima kasih sudah lahir ke dunia dan menjadi rumah bagiku. Sampai jumpa di hari-hari kita yang lain. Aku selalu mencintaimuu sayangg🤍. _engyourbae💌</p>
@@ -258,6 +302,7 @@ input#pass:focus{border-color:var(--gold)}
 const C={
   nama:"Sayang",
   kode:["28","1"],
+  jadian:"2026-09-01T19:45:00+07:00",   // tanggal & jam jadian (WIB)
   hadiah:"Satu pelukan hangat + momen-momen romantis kita berdua ✨",
   surat:"Sayanggkuu Inda Satliah,\n\nHari ini kamu bertambah satu usia, dan aku bertambah satu alasan untuk bersyukur.\n\nTerima kasih sudah sabar, sudah hangat, dan sudah jadi tempat pulang paling nyaman. Semoga tahun ini penuh tawa, sehat, dan semua doamu pelan-pelan jadi nyata.\n\nAku belum sempurna, tapi aku akan terus belajar menjagamu.\n\nDengan sayang,\n_engyourbae 💌",
   gosok:[   // tiap baris = 1 kartu gosok (tambah/kurangi bebas)
@@ -586,6 +631,107 @@ inits[10]=()=>{
     }catch(e){$('chint').textContent='Mikrofon tidak tersedia, ketuk lilinnya saja ya 🕯️'}
   };
 };
+
+/* ============ TIMER HARI JADI (berjalan live) ============ */
+inits[11]=()=>{
+  const T0=new Date(C.jadian),bx=[...document.querySelectorAll('#tm .tb')],pad=n=>String(n).padStart(2,'0'),prev=[];
+  const addM=k=>{const d=new Date(T0);d.setMonth(T0.getMonth()+k);return d};
+  function upd(){
+    const n=new Date();
+    let m=(n.getFullYear()-T0.getFullYear())*12+n.getMonth()-T0.getMonth();
+    while(m>0&&addM(m)>n)m--;if(m<0)m=0;
+    let r=Math.max(0,n-addM(m));
+    const d=Math.floor(r/864e5);r%=864e5;
+    const h=Math.floor(r/36e5);r%=36e5;
+    const mi=Math.floor(r/6e4),s=Math.floor(r%6e4/1e3);
+    [m,d,h,mi,s].forEach((v,i)=>{
+      const b=bx[i].firstChild;
+      if(prev[i]!==v){b.textContent=pad(v);if(prev[i]!==undefined){bx[i].classList.remove('pop');void bx[i].offsetWidth;bx[i].classList.add('pop')}prev[i]=v}
+    });
+    const tot=Math.max(0,Math.floor((n-T0)/864e5));
+    $('ttot').textContent=`Hari ke-${tot+1} bersamamu`;
+    const left=Math.max(0,Math.ceil((addM(m+1)-n)/864e5));
+    $('tnext').textContent=`Hari jadi ${m+1} bulan kita tinggal ${left} hari lagi 💕`;
+  }
+  upd();setInterval(upd,1000);
+};
+
+/* ============ PATCH: PRELOAD BERTAHAP + RESET PENUH ============ */
+(()=>{
+const AUTO=0; // detik di halaman akhir sebelum otomatis ulang dari awal (0 = mati, pakai tombol saja)
+const _st=window.setTimeout,_si=window.setInterval,TM=new Set();
+window.setTimeout=(f,t,...a)=>{const id=_st(function(){TM.delete(id);f.apply(this,arguments)},t,...a);TM.add(id);return id};
+window.setInterval=(f,t,...a)=>{const id=_si(f,t,...a);TM.add(id);return id};
+const killTimers=()=>{TM.forEach(id=>{clearTimeout(id);clearInterval(id)});TM.clear()};
+
+/* simpan stream mikrofon supaya bisa dimatikan saat reset */
+let micSt=null;
+const md=navigator.mediaDevices,gum=md&&md.getUserMedia&&md.getUserMedia.bind(md);
+if(gum)md.getUserMedia=c=>gum(c).then(s=>(micSt=s));
+
+/* ---------- PRELOAD BERTAHAP ---------- */
+const ld=document.createElement('p');ld.className='pm';ld.textContent='memuat kenangan… 0%';
+$('s0').querySelector('.in').appendChild(ld);
+const urls=C.foto.map(p=>p.src),KEEP=[];let ok=0,qi=0;
+const tick=()=>{ok++;ld.textContent=ok>=urls.length?'✨ semuanya sudah siap':`memuat kenangan… ${Math.round(ok/urls.length*100)}%`;
+  if(ok>=urls.length&&C.musik.length&&!on&&au.paused){au.preload='auto';au.load()}};
+const pump=()=>{
+  if(qi>=urls.length)return;
+  const im=new Image(),next=()=>{tick();_st(pump,120)};
+  im.decoding='async';
+  im.onload=()=>(im.decode?im.decode().catch(()=>{}):Promise.resolve()).then(next);
+  im.onerror=next;
+  im.src=urls[qi++];KEEP.push(im);
+};
+const startPreload=()=>{
+  ['italic 500 1em Fraunces','500 1em Fraunces','700 1em Caveat','700 1em Quicksand'].forEach(f=>document.fonts&&document.fonts.load(f).catch(()=>{}));
+  if(!urls.length){ld.textContent='✨ semuanya sudah siap';return}
+  pump();_st(pump,300);
+};
+document.readyState==='complete'?startPreload():addEventListener('load',startPreload);
+
+/* ---------- RESET PENUH ---------- */
+let auto=null;
+function resetAll(){
+  clearTimeout(auto);killTimers();
+  if(micSt){micSt.getTracks().forEach(t=>t.stop());micSt=null}
+  document.querySelectorAll('.cf,.pl,.pt,.sp,#ult,#lb').forEach(e=>e.remove());
+  P.length=0;R.length=0;fx.clearRect(0,0,fc.width,fc.height);
+  /* login */
+  const p=$('pass');p.value='';p.classList.remove('err');
+  no.style.transform='';no.textContent='Enggak';dc=0;
+  /* pohon */
+  $('tsv').innerHTML='';$('tmsg').classList.remove('show');
+  /* kado */
+  $('gbox').style.display='';$('gbox').classList.remove('sk');
+  $('ghint').style.display='';$('ghint').textContent='Ketuk kadonya 3 kali!';$('gmsg').style.display='';
+  /* galeri (clone supaya listener swipe tidak menumpuk) */
+  gi=0;fs=0;const f=$('fr');f.replaceWith(f.cloneNode(true));
+  /* dinding */
+  $('wall').innerHTML='';
+  /* amplop */
+  const e=$('env');e.classList.remove('open','go');e.style.display='';
+  $('ehint').style.display='';const pp=$('paper');pp.style.display='';pp.textContent='';$('ebtn').style.display='none';
+  /* kartu gosok */
+  $('sg').innerHTML='';$('sbtn').style.display='none';
+  /* kue */
+  const ck=$('ck');ck.innerHTML='';ck.classList.remove('rdy');
+  $('cw').getAnimations&&$('cw').getAnimations().forEach(a=>a.cancel());
+  $('chint').style.display='';$('chint').textContent='Kuenya lagi disiapkan… 🎂';
+  $('mic').style.display='none';$('cmsg').style.display='';
+  /* navigasi (panah/archery tidak di-init ulang agar listener tidak dobel) */
+  Object.keys(done).forEach(k=>{if(+k!==3)delete done[k]});
+  document.querySelectorAll('.in').forEach(x=>x.scrollTop=0);
+  S.forEach(s=>s.classList.remove('on'));
+  cur=0;max=0;S[0].classList.add('on');
+  $('bk').disabled=true;$('nx').disabled=true;$('cnt').textContent='1/'+S.length;
+}
+$('again').onclick=resetAll;
+
+/* opsional: otomatis ulang setelah N detik di halaman akhir */
+const _go=go;
+go=function(i){_go(i);clearTimeout(auto);if(AUTO&&cur===LAST)auto=_st(resetAll,AUTO*1000)};
+})();
 </script>
 </body>
 </html>
